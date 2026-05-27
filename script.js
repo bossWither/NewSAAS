@@ -113,4 +113,40 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1000);
     });
   }
+
+  // Value Calculator Logic
+  const aptSlider = document.getElementById('apt-slider');
+  const aptVal = document.getElementById('apt-val');
+  const timeVal = document.getElementById('time-val');
+  const paperVal = document.getElementById('paper-val');
+
+  if (aptSlider) {
+    aptSlider.addEventListener('input', function() {
+      const apartments = parseInt(this.value);
+      aptVal.innerText = apartments;
+
+      // Time saved calculation (e.g. 10 minutes per apartment)
+      const totalMinutes = apartments * 10;
+      const hours = Math.floor(totalMinutes / 60);
+      const minutes = totalMinutes % 60;
+      
+      const currentLang = localStorage.getItem('language') || 'bg';
+      
+      let timeText = '';
+      if (currentLang === 'bg') {
+        if (hours > 0) timeText += `${hours} час${hours > 1 ? 'а' : ''}`;
+        if (hours > 0 && minutes > 0) timeText += ' и ';
+        if (minutes > 0 || hours === 0) timeText += `${minutes} минути`;
+      } else {
+        if (hours > 0) timeText += `${hours} hour${hours > 1 ? 's' : ''}`;
+        if (hours > 0 && minutes > 0) timeText += ' and ';
+        if (minutes > 0 || hours === 0) timeText += `${minutes} minutes`;
+      }
+      timeVal.innerText = timeText;
+
+      // Paper saved calculation (e.g. 12 receipts per apartment per year)
+      const paperSaved = apartments * 12;
+      paperVal.innerText = paperSaved;
+    });
+  }
 });

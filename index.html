@@ -34,7 +34,6 @@
           <span class="lang-div">|</span>
           <button id="lang-en" class="lang-btn">EN</button>
         </div>
-        <a href="https://github.com/tedcheto/Bigla" target="_blank" class="btn btn-outline" data-i18n="nav_view_app">Виж Приложението</a>
         <a href="#contact" class="btn btn-primary" data-i18n="nav_get_demo">Заяви Демо</a>
       </div>
     </div>
@@ -139,6 +138,33 @@
           <div class="step-number">3</div>
           <h3 data-i18n="hiw_step_3_title">3. Проследяване</h3>
           <p data-i18n="hiw_step_3_desc">Отбелязвайте плащания с един клик и генерирайте прозрачни отчети за живущите.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Calculator Section -->
+  <section id="value-calculator" class="value-calculator">
+    <div class="container">
+      <div class="calculator-card fade-in-up">
+        <h2 data-i18n="calc_title" style="margin-bottom: 2rem; text-align: center;">Спестете време и усилия</h2>
+        <div class="calc-controls">
+          <label for="apt-slider" data-i18n="calc_slider_label">Брой апартаменти: <span id="apt-val">20</span></label>
+          <input type="range" id="apt-slider" class="custom-slider" min="5" max="100" value="20" step="1" />
+        </div>
+        <div class="calc-results">
+          <div class="result-item">
+            <div class="result-icon">⏱️</div>
+            <div class="result-text">
+              <span data-i18n="calc_time_saved_1">Спестява ви ~</span><strong id="time-val">3 часа</strong><span data-i18n="calc_time_saved_2"> събиране на такси и попълване на таблици всеки месец.</span>
+            </div>
+          </div>
+          <div class="result-item">
+            <div class="result-icon">📄</div>
+            <div class="result-text">
+              <span data-i18n="calc_paper_saved_1">Спестява </span><strong id="paper-val">240</strong><span data-i18n="calc_paper_saved_2"> хартиени бележки и квитанции годишно.</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

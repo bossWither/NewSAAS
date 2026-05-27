@@ -4,7 +4,6 @@ const translations = {
     "nav_features": "Функции",
     "nav_how_it_works": "Как работи",
     "nav_pricing": "Цени",
-    "nav_view_app": "Виж Приложението",
     "nav_get_demo": "Заяви Демо",
 
     // Hero
@@ -40,6 +39,14 @@ const translations = {
     "hiw_step_2_desc": "Въведете списъка с апартаменти и индивидуалните такси за всеки от тях.",
     "hiw_step_3_title": "3. Проследяване",
     "hiw_step_3_desc": "Отбелязвайте плащания с един клик и генерирайте прозрачни отчети за живущите.",
+
+    // Calculator
+    "calc_title": "Спестете време и усилия",
+    "calc_slider_label": "Брой апартаменти: ",
+    "calc_time_saved_1": "Спестява ви ~",
+    "calc_time_saved_2": " събиране на такси и попълване на таблици всеки месец.",
+    "calc_paper_saved_1": "Спестява ",
+    "calc_paper_saved_2": " хартиени бележки и квитанции годишно.",
 
     // Pricing
     "pricing_title": "Прости и прозрачни цени",
@@ -80,7 +87,6 @@ const translations = {
     "nav_features": "Features",
     "nav_how_it_works": "How it Works",
     "nav_pricing": "Pricing",
-    "nav_view_app": "View App",
     "nav_get_demo": "Get Demo",
 
     // Hero
@@ -116,6 +122,14 @@ const translations = {
     "hiw_step_2_desc": "Enter the list of apartments and their individual fees.",
     "hiw_step_3_title": "3. Track & Report",
     "hiw_step_3_desc": "Mark payments with a single click and generate transparent reports for residents.",
+
+    // Calculator
+    "calc_title": "Save Time and Effort",
+    "calc_slider_label": "Number of apartments: ",
+    "calc_time_saved_1": "Saves you ~",
+    "calc_time_saved_2": " of door-knocking and spreadsheet editing every month.",
+    "calc_paper_saved_1": "Saves ",
+    "calc_paper_saved_2": " paper receipts printed or handwritten per year.",
 
     // Pricing
     "pricing_title": "Simple & Transparent Pricing",
