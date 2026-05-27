@@ -50,14 +50,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Internationalization (i18n) Logic
+  // ── Value Calculator ──────────────────────────────────────────────────────
+  const aptSlider = document.getElementById('apt-slider');
+  const aptVal    = document.getElementById('apt-val');
+  const timeVal   = document.getElementById('time-val');
+  const paperVal  = document.getElementById('paper-val');
+  const priceVal  = document.getElementById('price-val');
+
+  function updateCalculator() {
+    if (!aptSlider) return;
+
+    const apartments = parseInt(aptSlider.value);
+    const lang = localStorage.getItem('language') || 'bg';
+
+    // Apartment count label
+    if (aptVal) aptVal.innerText = apartments;
+
+    // Time saved (10 min per apartment)
+    const totalMinutes = apartments * 10;
+    const hours   = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+
+    let timeText = '';
+    if (lang === 'bg') {
+      if (hours > 0)                    timeText += `${hours} час${hours > 1 ? 'а' : ''}`;
+      if (hours > 0 && minutes > 0)     timeText += ' и ';
+      if (minutes > 0 || hours === 0)   timeText += `${minutes} минути`;
+    } else {
+      if (hours > 0)                    timeText += `${hours} hour${hours > 1 ? 's' : ''}`;
+      if (hours > 0 && minutes > 0)     timeText += ' and ';
+      if (minutes > 0 || hours === 0)   timeText += `${minutes} minutes`;
+    }
+    if (timeVal) timeVal.innerText = timeText;
+
+    // Paper saved (12 receipts per apartment per year)
+    if (paperVal) paperVal.innerText = apartments * 12;
+
+    // Price: €5 flat for up to 10 apartments, +€0.15 per apartment above 10
+    let price = 5.00;
+    if (apartments > 10) price += (apartments - 10) * 0.15;
+    if (priceVal) {
+      priceVal.innerText = lang === 'bg'
+        ? `${price.toFixed(2)} €`
+        : `€${price.toFixed(2)}`;
+    }
+  }
+
+  if (aptSlider) {
+    aptSlider.addEventListener('input', updateCalculator);
+    // Run once on page load to set correct initial values
+    updateCalculator();
+  }
+
+  // ── Internationalization (i18n) ───────────────────────────────────────────
   const btnBg = document.getElementById('lang-bg');
   const btnEn = document.getElementById('lang-en');
   
   function setLanguage(lang) {
     localStorage.setItem('language', lang);
     
-    // Toggle active classes on buttons
     if (lang === 'bg') {
       btnBg.classList.add('active');
       btnEn.classList.remove('active');
@@ -77,95 +128,38 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Re-trigger calculator logic to update text in new language
-    const aptSlider = document.getElementById('apt-slider');
-    if (aptSlider) {
-      aptSlider.dispatchEvent(new Event('input'));
-    }
+    // Re-run calculator so numbers and currency format update in new language
+    updateCalculator();
   }
 
   // Check saved language or default to 'bg'
   const savedLang = localStorage.getItem('language') || 'bg';
   setLanguage(savedLang);
 
-  // Event Listeners for Language Switch
   btnBg.addEventListener('click', () => setLanguage('bg'));
   btnEn.addEventListener('click', () => setLanguage('en'));
 
-  // Contact / Demo Form Handler
-  const demoForm = document.getElementById('demoForm');
+  // ── Contact / Demo Form ───────────────────────────────────────────────────
+  const demoForm    = document.getElementById('demoForm');
   const formSuccess = document.getElementById('formSuccess');
   if (demoForm) {
     demoForm.addEventListener('submit', (e) => {
-      e.preventDefault(); // Prevent actual form submission to keep it static
+      e.preventDefault();
       
-      const submitBtn = demoForm.querySelector('button[type="submit"]');
+      const submitBtn  = demoForm.querySelector('button[type="submit"]');
       const currentLang = localStorage.getItem('language') || 'bg';
       
       submitBtn.innerText = currentLang === 'bg' ? 'Изпращане...' : 'Sending...';
       submitBtn.disabled = true;
 
-      // Simulate a network request
       setTimeout(() => {
         demoForm.reset();
         submitBtn.innerText = currentLang === 'bg' ? 'Изпрати Заявка' : 'Submit Request';
         submitBtn.disabled = false;
         
-        // Show success message
         formSuccess.style.display = 'block';
-        setTimeout(() => {
-          formSuccess.style.display = 'none';
-        }, 5000);
+        setTimeout(() => { formSuccess.style.display = 'none'; }, 5000);
       }, 1000);
     });
-  }
-
-  // Value Calculator Logic
-  const aptSlider = document.getElementById('apt-slider');
-  const aptVal = document.getElementById('apt-val');
-  const timeVal = document.getElementById('time-val');
-  const paperVal = document.getElementById('paper-val');
-  const priceVal = document.getElementById('price-val');
-
-  if (aptSlider) {
-    aptSlider.addEventListener('input', function() {
-      const apartments = parseInt(this.value);
-      aptVal.innerText = apartments;
-
-      // Time saved calculation (e.g. 10 minutes per apartment)
-      const totalMinutes = apartments * 10;
-      const hours = Math.floor(totalMinutes / 60);
-      const minutes = totalMinutes % 60;
-      
-      const currentLang = localStorage.getItem('language') || 'bg';
-      
-      let timeText = '';
-      if (currentLang === 'bg') {
-        if (hours > 0) timeText += `${hours} час${hours > 1 ? 'а' : ''}`;
-        if (hours > 0 && minutes > 0) timeText += ' и ';
-        if (minutes > 0 || hours === 0) timeText += `${minutes} минути`;
-      } else {
-        if (hours > 0) timeText += `${hours} hour${hours > 1 ? 's' : ''}`;
-        if (hours > 0 && minutes > 0) timeText += ' and ';
-        if (minutes > 0 || hours === 0) timeText += `${minutes} minutes`;
-      }
-      timeVal.innerText = timeText;
-
-      // Paper saved calculation (e.g. 12 receipts per apartment per year)
-      const paperSaved = apartments * 12;
-      paperVal.innerText = paperSaved;
-
-      // Price calculation
-      let price = 5.00;
-      if (apartments > 10) {
-        price += (apartments - 10) * 0.15;
-      }
-      if (priceVal) {
-        priceVal.innerText = currentLang === 'bg' ? `${price.toFixed(2)} €` : `€${price.toFixed(2)}`;
-      }
-    });
-
-    // Initial trigger
-    aptSlider.dispatchEvent(new Event('input'));
   }
 });
