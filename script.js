@@ -89,8 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Price: €5 flat for up to 10 apartments, +€0.15 per apartment above 10
     let price = 5.00;
     if (apartments > 10) price += (apartments - 10) * 0.15;
+    const premiumPrice = document.getElementById('premium-price');
     if (priceVal) {
       priceVal.innerText = lang === 'bg'
+        ? `${price.toFixed(2)} €`
+        : `€${price.toFixed(2)}`;
+    }
+    if (premiumPrice) {
+      premiumPrice.innerText = lang === 'bg'
         ? `${price.toFixed(2)} €`
         : `€${price.toFixed(2)}`;
     }
