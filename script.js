@@ -76,6 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
         el.innerText = translations[lang][key];
       }
     });
+
+    // Re-trigger calculator logic to update text in new language
+    const aptSlider = document.getElementById('apt-slider');
+    if (aptSlider) {
+      aptSlider.dispatchEvent(new Event('input'));
+    }
   }
 
   // Check saved language or default to 'bg'
@@ -148,5 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const paperSaved = apartments * 12;
       paperVal.innerText = paperSaved;
     });
+
+    // Initial trigger
+    aptSlider.dispatchEvent(new Event('input'));
   }
 });
