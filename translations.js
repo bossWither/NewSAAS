@@ -47,6 +47,7 @@ const translations = {
     "calc_time_saved_2": " събиране на такси и попълване на таблици всеки месец.",
     "calc_paper_saved_1": "Спестява ",
     "calc_paper_saved_2": " хартиени бележки и квитанции годишно.",
+    "calc_price_label": "Месечна такса: ",
 
     // Pricing
     "pricing_title": "Прости и прозрачни цени",
@@ -60,8 +61,8 @@ const translations = {
     "price_demo_btn": "Заяви Демо",
 
     "price_pro_title": "Премиум",
-    "price_pro_price": "Свържете се с нас",
-    "price_pro_feat_1": "Неограничен брой апартаменти",
+    "price_pro_price": "От 5 € / мес.",
+    "price_pro_feat_1": "5 € за първите 10 ап., +0.15 € за всеки следващ",
     "price_pro_feat_2": "Пълни отчети за Viber/WhatsApp",
     "price_pro_feat_3": "Приоритетна поддръжка",
     "price_pro_btn": "Вземи Премиум",
@@ -130,6 +131,7 @@ const translations = {
     "calc_time_saved_2": " of door-knocking and spreadsheet editing every month.",
     "calc_paper_saved_1": "Saves ",
     "calc_paper_saved_2": " paper receipts printed or handwritten per year.",
+    "calc_price_label": "Monthly fee: ",
 
     // Pricing
     "pricing_title": "Simple & Transparent Pricing",
@@ -143,8 +145,8 @@ const translations = {
     "price_demo_btn": "Request Demo",
 
     "price_pro_title": "Premium",
-    "price_pro_price": "Contact Us",
-    "price_pro_feat_1": "Unlimited apartments",
+    "price_pro_price": "From €5 / mo",
+    "price_pro_feat_1": "€5 for first 10 apts, +€0.15 per extra",
     "price_pro_feat_2": "Full Viber/WhatsApp reports",
     "price_pro_feat_3": "Priority support",
     "price_pro_btn": "Get Premium",

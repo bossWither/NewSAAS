@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const aptVal = document.getElementById('apt-val');
   const timeVal = document.getElementById('time-val');
   const paperVal = document.getElementById('paper-val');
+  const priceVal = document.getElementById('price-val');
 
   if (aptSlider) {
     aptSlider.addEventListener('input', function() {
@@ -153,6 +154,15 @@ document.addEventListener('DOMContentLoaded', () => {
       // Paper saved calculation (e.g. 12 receipts per apartment per year)
       const paperSaved = apartments * 12;
       paperVal.innerText = paperSaved;
+
+      // Price calculation
+      let price = 5.00;
+      if (apartments > 10) {
+        price += (apartments - 10) * 0.15;
+      }
+      if (priceVal) {
+        priceVal.innerText = currentLang === 'bg' ? `${price.toFixed(2)} €` : `€${price.toFixed(2)}`;
+      }
     });
 
     // Initial trigger
