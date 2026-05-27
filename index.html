@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,13 +24,18 @@
         <span class="logo-text">Bigla</span>
       </div>
       <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How it Works</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#features" data-i18n="nav_features">Функции</a>
+        <a href="#how-it-works" data-i18n="nav_how_it_works">Как работи</a>
+        <a href="#pricing" data-i18n="nav_pricing">Цени</a>
       </div>
       <div class="nav-actions">
-        <a href="https://github.com/tedcheto/Bigla" target="_blank" class="btn btn-outline">View App</a>
-        <a href="#contact" class="btn btn-primary">Get Demo</a>
+        <div class="lang-switch">
+          <button id="lang-bg" class="lang-btn active">BG</button>
+          <span class="lang-div">|</span>
+          <button id="lang-en" class="lang-btn">EN</button>
+        </div>
+        <a href="https://github.com/tedcheto/Bigla" target="_blank" class="btn btn-outline" data-i18n="nav_view_app">Виж Приложението</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="nav_get_demo">Заяви Демо</a>
       </div>
     </div>
   </nav>
@@ -39,25 +44,25 @@
   <header class="hero">
     <div class="container hero-container">
       <div class="hero-content fade-in-up">
-        <div class="badge">🚀 The Future of Property Management</div>
-        <h1 class="hero-title">Manage Apartment Finances <span class="gradient-text">Effortlessly</span></h1>
-        <p class="hero-subtitle">Bigla is the ultimate SaaS platform for building cashiers. Track taxes, monitor expenses, and keep residents informed with unparalleled transparency.</p>
+        <div class="badge" data-i18n="hero_badge">🚀 Бъдещето на управлението на имоти</div>
+        <h1 class="hero-title"><span data-i18n="hero_title_1">Управлявайте финансите на сградата </span><span class="gradient-text" data-i18n="hero_title_gradient">без усилия</span></h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">Bigla е най-добрата SaaS платформа за касиери на сгради. Следете такси, управлявайте разходи и дръжте живущите информирани с несравнима прозрачност.</p>
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary btn-large">Start Free Trial</a>
-          <a href="#features" class="btn btn-outline btn-large">Explore Features</a>
+          <a href="#contact" class="btn btn-primary btn-large" data-i18n="hero_btn_trial">Заяви Демо</a>
+          <a href="#features" class="btn btn-outline btn-large" data-i18n="hero_btn_features">Разгледай Функциите</a>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
-            <strong>100%</strong>
-            <span>Transparent</span>
+            <strong data-i18n="hero_stat_1_val">100%</strong>
+            <span data-i18n="hero_stat_1_lbl">Прозрачност</span>
           </div>
           <div class="stat-item">
-            <strong>0</strong>
-            <span>Spreadsheets</span>
+            <strong data-i18n="hero_stat_2_val">0</strong>
+            <span data-i18n="hero_stat_2_lbl">Екселски таблици</span>
           </div>
           <div class="stat-item">
-            <strong>24/7</strong>
-            <span>Cloud Access</span>
+            <strong data-i18n="hero_stat_3_val">24/7</strong>
+            <span data-i18n="hero_stat_3_lbl">Облачен достъп</span>
           </div>
         </div>
       </div>
@@ -70,15 +75,15 @@
           </div>
           <div class="mockup-body">
             <div class="mockup-stats">
-              <div class="mockup-stat-box">10/12<br><span>Paid</span></div>
-              <div class="mockup-stat-box">240 €<br><span>Collected</span></div>
+              <div class="mockup-stat-box">10/12<br><span>Платили</span></div>
+              <div class="mockup-stat-box">240 €<br><span>Събрани</span></div>
             </div>
             <div class="mockup-list">
-              <div class="mockup-row success">Apt 25 <span>✅ Paid</span></div>
-              <div class="mockup-row pending">Apt 26 <span>⏳ Pending</span></div>
-              <div class="mockup-row success">Apt 27 <span>✅ Paid</span></div>
+              <div class="mockup-row success">Ап 25 <span>✅ Платено</span></div>
+              <div class="mockup-row pending">Ап 26 <span>⏳ Чакащо</span></div>
+              <div class="mockup-row success">Ап 27 <span>✅ Платено</span></div>
             </div>
-            <div class="mockup-btn">Generate Report</div>
+            <div class="mockup-btn" id="mockupBtn">Генерирай Отчет</div>
           </div>
         </div>
       </div>
@@ -89,35 +94,119 @@
   <section id="features" class="features">
     <div class="container">
       <div class="section-header fade-in-up">
-        <h2>Why Choose Bigla?</h2>
-        <p>Built for cashiers and loved by residents. Stop chasing payments and start managing smarter.</p>
+        <h2 data-i18n="feat_title">Защо да изберете Bigla?</h2>
+        <p data-i18n="feat_subtitle">Създадена за касиери и обичана от живущите. Спрете да преследвате плащания и започнете да управлявате по-умно.</p>
       </div>
       <div class="features-grid">
         <div class="feature-card fade-in-up delay-1">
           <div class="feature-icon">⚡</div>
-          <h3>Real-time Tracking</h3>
-          <p>Instant updates on who paid and who owes. Real-time Firebase sync means you always see the latest data.</p>
+          <h3 data-i18n="feat_1_title">Проследяване в реално време</h3>
+          <p data-i18n="feat_1_desc">Моментални актуализации кой е платил и кой дължи. Синхронизацията в реално време означава, че винаги виждате най-новите данни.</p>
         </div>
         <div class="feature-card fade-in-up delay-2">
           <div class="feature-icon">📊</div>
-          <h3>Expense Management</h3>
-          <p>Easily log building expenses, repairs, and cleaning fees. Keep everyone accountable with clear financial balances.</p>
+          <h3 data-i18n="feat_2_title">Управление на разходите</h3>
+          <p data-i18n="feat_2_desc">Лесно записвайте разходи за сградата, ремонти и такси за почистване. Дръжте всички отговорни с ясни финансови баланси.</p>
         </div>
         <div class="feature-card fade-in-up delay-3">
           <div class="feature-icon">📱</div>
-          <h3>One-Click Reports</h3>
-          <p>Generate detailed monthly reports with a single click and copy them directly to WhatsApp or Viber.</p>
+          <h3 data-i18n="feat_3_title">Отчети с един клик</h3>
+          <p data-i18n="feat_3_desc">Генерирайте подробни месечни отчети с един клик и ги копирайте директно в WhatsApp или Viber.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta">
-    <div class="container cta-container fade-in-up">
-      <h2>Ready to modernize your building?</h2>
-      <p>Join the future of property management today. Simple, fast, and secure.</p>
-      <a href="#contact" class="btn btn-primary btn-large">Get Started Now</a>
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="how-it-works">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 data-i18n="hiw_title">Как работи?</h2>
+        <p data-i18n="hiw_subtitle">Започнете да управлявате сградата си за по-малко от 5 минути.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card fade-in-up delay-1">
+          <div class="step-number">1</div>
+          <h3 data-i18n="hiw_step_1_title">1. Регистрация</h3>
+          <p data-i18n="hiw_step_1_desc">Регистрирайте вашата сграда и настройте основните параметри и месечни такси.</p>
+        </div>
+        <div class="step-card fade-in-up delay-2">
+          <div class="step-number">2</div>
+          <h3 data-i18n="hiw_step_2_title">2. Добавяне на апартаменти</h3>
+          <p data-i18n="hiw_step_2_desc">Въведете списъка с апартаменти и индивидуалните такси за всеки от тях.</p>
+        </div>
+        <div class="step-card fade-in-up delay-3">
+          <div class="step-number">3</div>
+          <h3 data-i18n="hiw_step_3_title">3. Проследяване</h3>
+          <p data-i18n="hiw_step_3_desc">Отбелязвайте плащания с един клик и генерирайте прозрачни отчети за живущите.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 data-i18n="pricing_title">Прости и прозрачни цени</h2>
+        <p data-i18n="pricing_subtitle">Изберете план, който отговаря на нуждите на вашата сграда.</p>
+      </div>
+      <div class="pricing-grid">
+        
+        <!-- Demo Tier -->
+        <div class="pricing-card fade-in-up delay-1">
+          <h3 data-i18n="price_demo_title">Демо Версия</h3>
+          <div class="price" data-i18n="price_demo_price">Безплатно</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> <span data-i18n="price_demo_feat_1">Тествайте всички функции</span></li>
+            <li><span class="check">✓</span> <span data-i18n="price_demo_feat_2">До 5 апартамента</span></li>
+            <li><span class="check">✓</span> <span data-i18n="price_demo_feat_3">Ограничени отчети</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" style="width: 100%; text-align: center;" data-i18n="price_demo_btn">Заяви Демо</a>
+        </div>
+
+        <!-- Premium Tier -->
+        <div class="pricing-card popular fade-in-up delay-2">
+          <div class="popular-badge">⭐ Best Value</div>
+          <h3 data-i18n="price_pro_title">Премиум</h3>
+          <div class="price" data-i18n="price_pro_price">Свържете се с нас</div>
+          <ul class="pricing-features">
+            <li><span class="check">✓</span> <span data-i18n="price_pro_feat_1">Неограничен брой апартаменти</span></li>
+            <li><span class="check">✓</span> <span data-i18n="price_pro_feat_2">Пълни отчети за Viber/WhatsApp</span></li>
+            <li><span class="check">✓</span> <span data-i18n="price_pro_feat_3">Приоритетна поддръжка</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;" data-i18n="price_pro_btn">Вземи Премиум</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Demo Form Section -->
+  <section id="contact" class="contact-section">
+    <div class="container contact-container fade-in-up">
+      <div class="contact-content">
+        <h2 data-i18n="contact_title">Заявете вашето демо</h2>
+        <p data-i18n="contact_subtitle">Оставете вашите контакти и ние ще се свържем с вас, за да ви покажем как Bigla може да помогне на вашата сграда.</p>
+      </div>
+      <div class="contact-form-wrapper">
+        <form id="demoForm" class="demo-form">
+          <div class="form-group">
+            <label for="name" data-i18n="contact_lbl_name">Име и Фамилия</label>
+            <input type="text" id="name" required placeholder="Ivan Ivanov" />
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="contact_lbl_email">Имейл адрес</label>
+            <input type="email" id="email" required placeholder="ivan@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="phone" data-i18n="contact_lbl_phone">Телефонен номер</label>
+            <input type="tel" id="phone" required placeholder="+359 88 888 8888" />
+          </div>
+          <button type="submit" class="btn btn-primary btn-large" style="width: 100%" data-i18n="contact_btn_submit">Изпрати Заявка</button>
+          <div id="formSuccess" class="form-success" style="display:none;" data-i18n="contact_success">Благодарим ви! Ще се свържем с вас скоро.</div>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -129,19 +218,20 @@
           <span class="logo-icon">🏠</span>
           <span class="logo-text">Bigla</span>
         </div>
-        <p>Smart property and tax management for modern communities.</p>
+        <p data-i18n="footer_desc">Умно управление на имоти и такси за модерни общности.</p>
       </div>
       <div class="footer-links">
-        <a href="https://github.com/tedcheto/Bigla" target="_blank">View on GitHub</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="https://github.com/tedcheto/Bigla" target="_blank" data-i18n="footer_github">Виж в GitHub</a>
+        <a href="#" data-i18n="footer_privacy">Поверителност</a>
+        <a href="#" data-i18n="footer_terms">Общи условия</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      &copy; 2026 Bigla SaaS. All rights reserved.
+    <div class="footer-bottom" data-i18n="footer_rights">
+      &copy; 2026 Bigla SaaS. Всички права запазени.
     </div>
   </footer>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
