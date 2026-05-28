@@ -67,6 +67,16 @@ const translations = {
     "price_pro_feat_3": "Приоритетна поддръжка",
     "price_pro_btn": "Вземи Премиум",
 
+    // FAQ
+    "faq_title": "Често задавани въпроси",
+    "faq_subtitle": "Имате въпроси? Ето най-често срещаните отговори.",
+    "faq_q1": "Колко време отнема първоначалната настройка?",
+    "faq_a1": "Настройката отнема по-малко от 5 минути. Просто въвеждате броя апартаменти и месечните такси, и сте готови.",
+    "faq_q2": "Трябва ли живущите да инсталират приложение?",
+    "faq_a2": "Не! Живущите получават ясните си месечни отчети директно във Viber или WhatsApp като текстови съобщения.",
+    "faq_q3": "Сигурни ли са данните на сградата?",
+    "faq_a3": "Абсолютно. Всички данни се съхраняват сигурно в облака с криптиране, така че само вие имате достъп до тях.",
+    
     // Contact / Demo Form
     "contact_title": "Заявете вашето демо",
     "contact_subtitle": "Оставете вашите контакти и ние ще се свържем с вас, за да ви покажем как Bigla може да помогне на вашата сграда.",
@@ -150,6 +160,16 @@ const translations = {
     "price_pro_feat_2": "Full Viber/WhatsApp reports",
     "price_pro_feat_3": "Priority support",
     "price_pro_btn": "Get Premium",
+
+    // FAQ
+    "faq_title": "Frequently Asked Questions",
+    "faq_subtitle": "Have questions? Here are the most common answers.",
+    "faq_q1": "How long does setup take?",
+    "faq_a1": "Setup takes less than 5 minutes. You just enter the number of apartments and monthly fees, and you're ready.",
+    "faq_q2": "Do residents need to install an app?",
+    "faq_a2": "No! Residents receive their clear monthly reports directly on Viber or WhatsApp as text messages.",
+    "faq_q3": "Is the building's data secure?",
+    "faq_a3": "Absolutely. All data is securely stored in the cloud with encryption, so only you have access to it.",
 
     // Contact / Demo Form
     "contact_title": "Request Your Demo",
