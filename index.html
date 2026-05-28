@@ -29,9 +29,9 @@
         <a href="#pricing" data-i18n="nav_pricing">Цени</a>
       </div>
       <div class="nav-actions">
-        <div class="lang-switch">
+        <div class="lang-switch" id="langSwitch">
+          <div class="lang-pill" id="langPill"></div>
           <button id="lang-bg" class="lang-btn active">BG</button>
-          <span class="lang-div">|</span>
           <button id="lang-en" class="lang-btn">EN</button>
         </div>
         <a href="#contact" class="btn btn-primary" data-i18n="nav_get_demo">Заяви Демо</a>
@@ -214,6 +214,54 @@
     </div>
   </section>
 
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <h2 data-i18n="testi_title">Какво казват касиерите</h2>
+        <p data-i18n="testi_subtitle">Вижте как Bigla помага на сгради като вашата.</p>
+      </div>
+      <div class="testimonials-carousel fade-in-up delay-1">
+        <button class="carousel-btn prev-btn">&lt;</button>
+        <div class="carousel-track-container">
+          <ul class="carousel-track" id="testimonialTrack">
+            <li class="carousel-slide current-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text" data-i18n="testi_1_text">"Събирането на такси ми отнемаше цял уикенд. Сега го правя за 15 минути чрез Viber отчети!"</p>
+                <div class="testimonial-author">
+                  <strong data-i18n="testi_1_author">Георги Димитров</strong>
+                  <span data-i18n="testi_1_role">Касиер, 45 апартамента</span>
+                </div>
+              </div>
+            </li>
+            <li class="carousel-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text" data-i18n="testi_2_text">"Живущите най-после виждат къде отиват парите. Прозрачността е на 100%."</p>
+                <div class="testimonial-author">
+                  <strong data-i18n="testi_2_author">Мария Иванова</strong>
+                  <span data-i18n="testi_2_role">Касиер, 20 апартамента</span>
+                </div>
+              </div>
+            </li>
+            <li class="carousel-slide">
+              <div class="testimonial-card">
+                <div class="quote-icon">"</div>
+                <p class="testimonial-text" data-i18n="testi_3_text">"Забравих за екселските таблици. Всичко е автоматизирано и лесно за използване."</p>
+                <div class="testimonial-author">
+                  <strong data-i18n="testi_3_author">Петър Стоянов</strong>
+                  <span data-i18n="testi_3_role">Домоуправител, 32 апартамента</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="carousel-btn next-btn">&gt;</button>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ Section -->
   <section id="faq" class="faq-section">
     <div class="container">
@@ -305,6 +353,20 @@
       &copy; 2026 Bigla SaaS. Всички права запазени.
     </div>
   </footer>
+
+  <!-- Floating Widget -->
+  <a href="#contact" class="floating-widget fade-in-up delay-2" data-i18n="widget_tooltip" title="Свържете се с нас">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+  </a>
+
+  <!-- Cookie Consent Bar -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p data-i18n="cookie_msg">Този сайт използва бисквитки, за да ви осигури най-доброто изживяване.</p>
+    <div class="cookie-buttons">
+      <button id="cookie-accept" class="btn btn-primary btn-sm" data-i18n="cookie_accept">Приемам</button>
+      <button id="cookie-decline" class="btn btn-outline btn-sm" data-i18n="cookie_decline">Отказвам</button>
+    </div>
+  </div>
 
   <script src="translations.js"></script>
   <script src="script.js"></script>

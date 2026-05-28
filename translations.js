@@ -86,6 +86,27 @@ const translations = {
     "contact_btn_submit": "Изпрати Заявка",
     "contact_success": "Благодарим ви! Ще се свържем с вас скоро.",
 
+    // Testimonials
+    "testi_title": "Какво казват касиерите",
+    "testi_subtitle": "Вижте как Bigla помага на сгради като вашата.",
+    "testi_1_text": "\"Събирането на такси ми отнемаше цял уикенд. Сега го правя за 15 минути чрез Viber отчети!\"",
+    "testi_1_author": "Георги Димитров",
+    "testi_1_role": "Касиер, 45 апартамента",
+    "testi_2_text": "\"Живущите най-после виждат къде отиват парите. Прозрачността е на 100%.\"",
+    "testi_2_author": "Мария Иванова",
+    "testi_2_role": "Касиер, 20 апартамента",
+    "testi_3_text": "\"Забравих за екселските таблици. Всичко е автоматизирано и лесно за използване.\"",
+    "testi_3_author": "Петър Стоянов",
+    "testi_3_role": "Домоуправител, 32 апартамента",
+    
+    // Cookie Consent
+    "cookie_msg": "Този сайт използва бисквитки, за да ви осигури най-доброто изживяване.",
+    "cookie_accept": "Приемам",
+    "cookie_decline": "Отказвам",
+
+    // Floating Widget
+    "widget_tooltip": "Свържете се с нас",
+
     // Footer
     "footer_desc": "Умно управление на имоти и такси за модерни общности.",
     "footer_github": "Виж в GitHub",
@@ -179,6 +200,27 @@ const translations = {
     "contact_lbl_phone": "Phone Number",
     "contact_btn_submit": "Submit Request",
     "contact_success": "Thank you! We will contact you shortly.",
+
+    // Testimonials
+    "testi_title": "What Cashiers Say",
+    "testi_subtitle": "See how Bigla helps buildings like yours.",
+    "testi_1_text": "\"Collecting fees used to take my whole weekend. Now it takes 15 minutes via Viber reports!\"",
+    "testi_1_author": "Georgi Dimitrov",
+    "testi_1_role": "Cashier, 45 apartments",
+    "testi_2_text": "\"Residents finally see where the money goes. Transparency is at 100%.\"",
+    "testi_2_author": "Maria Ivanova",
+    "testi_2_role": "Cashier, 20 apartments",
+    "testi_3_text": "\"I forgot about Excel spreadsheets. Everything is automated and easy to use.\"",
+    "testi_3_author": "Petar Stoyanov",
+    "testi_3_role": "Building Manager, 32 apartments",
+    
+    // Cookie Consent
+    "cookie_msg": "This website uses cookies to ensure you get the best experience.",
+    "cookie_accept": "Accept",
+    "cookie_decline": "Decline",
+
+    // Floating Widget
+    "widget_tooltip": "Contact us",
 
     // Footer
     "footer_desc": "Smart property and tax management for modern communities.",

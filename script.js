@@ -115,6 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function setLanguage(lang) {
     localStorage.setItem('language', lang);
     
+    const langSwitch = document.getElementById('langSwitch');
+    if (langSwitch) langSwitch.setAttribute('data-active', lang);
+
     if (lang === 'bg') {
       btnBg.classList.add('active');
       btnEn.classList.remove('active');
@@ -187,4 +190,70 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // ── Testimonials Carousel ───────────────────────────────────────────────────
+  const track = document.getElementById('testimonialTrack');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  if (track && prevBtn && nextBtn) {
+    const slides = Array.from(track.children);
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+
+    // Auto scroll
+    let autoScroll = setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    }, 5000);
+
+    const carouselContainer = document.querySelector('.testimonials-carousel');
+    if (carouselContainer) {
+      carouselContainer.addEventListener('mouseenter', () => clearInterval(autoScroll));
+      carouselContainer.addEventListener('mouseleave', () => {
+        autoScroll = setInterval(() => {
+          currentIndex = (currentIndex + 1) % slides.length;
+          updateCarousel();
+        }, 5000);
+      });
+    }
+  }
+
+  // ── Cookie Consent ──────────────────────────────────────────────────────────
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const declineBtn = document.getElementById('cookie-decline');
+
+  if (cookieBanner && acceptBtn && declineBtn) {
+    const hasConsent = localStorage.getItem('cookieConsent');
+    if (!hasConsent) {
+      setTimeout(() => {
+        cookieBanner.classList.add('show');
+      }, 2000);
+    }
+
+    const hideBanner = (consentValue) => {
+      localStorage.setItem('cookieConsent', consentValue);
+      cookieBanner.classList.remove('show');
+    };
+
+    acceptBtn.addEventListener('click', () => hideBanner('accepted'));
+    declineBtn.addEventListener('click', () => hideBanner('declined'));
+  }
 });
