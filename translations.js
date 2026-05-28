@@ -104,9 +104,6 @@ const translations = {
     "cookie_accept": "Приемам",
     "cookie_decline": "Отказвам",
 
-    // Floating Widget
-    "widget_tooltip": "Свържете се с нас",
-
     // Footer
     "footer_desc": "Умно управление на имоти и такси за модерни общности.",
     "footer_github": "Виж в GitHub",
@@ -218,9 +215,6 @@ const translations = {
     "cookie_msg": "This website uses cookies to ensure you get the best experience.",
     "cookie_accept": "Accept",
     "cookie_decline": "Decline",
-
-    // Floating Widget
-    "widget_tooltip": "Contact us",
 
     // Footer
     "footer_desc": "Smart property and tax management for modern communities.",

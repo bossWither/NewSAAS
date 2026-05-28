@@ -994,28 +994,6 @@ h1, h2, h3 {
   font-size: 0.9rem;
 }
 
-/* Floating Widget */
-.floating-widget {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, var(--secondary-light), var(--primary-light));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  box-shadow: 0 4px 15px rgba(58, 123, 213, 0.4);
-  z-index: 99;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.floating-widget:hover {
-  transform: scale(1.1) translateY(-5px);
-}
-
 /* Cookie Banner */
 .cookie-banner {
   position: fixed;
