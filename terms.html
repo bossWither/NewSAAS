@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bigla | Terms of Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">🏠</span>
+        <span class="logo-text">Bigla</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html#features" data-i18n="nav_features">Функции</a>
+        <a href="index.html#how-it-works" data-i18n="nav_how_it_works">Как работи</a>
+        <a href="index.html#pricing" data-i18n="nav_pricing">Цени</a>
+      </div>
+      <div class="nav-actions">
+        <div class="lang-switch" id="langSwitch">
+          <div class="lang-pill" id="langPill"></div>
+          <button id="lang-bg" class="lang-btn active">BG</button>
+          <button id="lang-en" class="lang-btn">EN</button>
+        </div>
+        <a href="index.html#contact" class="btn btn-primary" data-i18n="nav_get_demo">Заяви Демо</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="legal-section">
+    <div class="container legal-container glass-panel">
+      <h1 data-i18n="legal_terms_title">Общи условия</h1>
+      <p class="legal-date" data-i18n="legal_terms_last_updated">Последно обновени: 28 Май 2026</p>
+      
+      <div class="legal-content">
+        <p data-i18n="legal_terms_p1">Използвайки Bigla, вие се съгласявате с тези условия. Платформата е предназначена за управление на етажна собственост от упълномощени лица.</p>
+        <p data-i18n="legal_terms_p2">Потребителите са отговорни за точността на въведените данни. Bigla не носи отговорност за спорове между живущите и домоуправителя.</p>
+        <p data-i18n="legal_terms_p3">Запазваме си правото да прекратим достъпа на потребители, които злоупотребяват с платформата или нарушават приложимото законодателство.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <span class="logo-icon">🏠</span>
+          <span class="logo-text">Bigla</span>
+        </a>
+        <p data-i18n="footer_desc">Умно управление на имоти и такси за модерни общности.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/tedcheto/Bigla" target="_blank" data-i18n="footer_github">Виж в GitHub</a>
+        <a href="privacy.html" data-i18n="footer_privacy">Поверителност</a>
+        <a href="terms.html" data-i18n="footer_terms">Общи условия</a>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n="footer_rights">
+      &copy; 2026 Bigla SaaS. Всички права запазени.
+    </div>
+  </footer>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
