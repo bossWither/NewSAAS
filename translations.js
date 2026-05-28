@@ -114,15 +114,29 @@ const translations = {
     // Legal Pages
     "legal_privacy_title": "Политика за поверителност",
     "legal_privacy_last_updated": "Последно обновена: 28 Май 2026",
+    "legal_privacy_h2_1": "1. Въведение",
     "legal_privacy_p1": "Ние в Bigla се отнасяме сериозно към вашата поверителност. Тази политика обяснява как събираме, използваме и защитаваме вашата лична информация при използване на нашата платформа.",
+    "legal_privacy_h2_2": "2. Събиране на данни",
     "legal_privacy_p2": "Събираме само информация, необходима за предоставяне на услугата: имена, имейли и данни за апартамента. Данните за плащанията се обработват сигурно от трети страни.",
+    "legal_privacy_h2_3": "3. Споделяне на информация",
     "legal_privacy_p3": "Никога не продаваме вашите данни на трети страни. Всички данни се съхраняват криптирани на сигурни сървъри в ЕС.",
+    "legal_privacy_h2_4": "4. Вашите права (GDPR)",
+    "legal_privacy_p4": "Имате право да поискате достъп до вашите данни, тяхното коригиране или изтриване по всяко време. Моля, свържете се с нас за съдействие.",
+    "legal_privacy_h2_5": "5. Бисквитки (Cookies)",
+    "legal_privacy_p5": "Използваме само строго необходими бисквитки за функционалността на платформата. За повече информация прегледайте настройките на браузъра си.",
     
     "legal_terms_title": "Общи условия",
     "legal_terms_last_updated": "Последно обновени: 28 Май 2026",
+    "legal_terms_h2_1": "1. Приемане на условията",
     "legal_terms_p1": "Използвайки Bigla, вие се съгласявате с тези условия. Платформата е предназначена за управление на етажна собственост от упълномощени лица.",
+    "legal_terms_h2_2": "2. Отговорности на потребителя",
     "legal_terms_p2": "Потребителите са отговорни за точността на въведените данни. Bigla не носи отговорност за спорове между живущите и домоуправителя.",
-    "legal_terms_p3": "Запазваме си правото да прекратим достъпа на потребители, които злоупотребяват с платформата или нарушават приложимото законодателство."
+    "legal_terms_h2_3": "3. Прекратяване на достъп",
+    "legal_terms_p3": "Запазваме си правото да прекратим достъпа на потребители, които злоупотребяват с платформата или нарушават приложимото законодателство.",
+    "legal_terms_h2_4": "4. Интелектуална собственост",
+    "legal_terms_p4": "Всички права върху софтуера, дизайна и марката Bigla са запазени. Копирането или разпространението им е строго забранено.",
+    "legal_terms_h2_5": "5. Ограничаване на отговорността",
+    "legal_terms_p5": "Платформата се предоставя \"във вида, в който е\". Ние не гарантираме 100% непрекъсваемост на услугата и не носим отговорност за пропуснати ползи."
   },
   en: {
     // Navbar
@@ -239,14 +253,28 @@ const translations = {
     // Legal Pages
     "legal_privacy_title": "Privacy Policy",
     "legal_privacy_last_updated": "Last updated: May 28, 2026",
+    "legal_privacy_h2_1": "1. Introduction",
     "legal_privacy_p1": "At Bigla, we take your privacy seriously. This policy explains how we collect, use, and protect your personal information when using our platform.",
+    "legal_privacy_h2_2": "2. Data Collection",
     "legal_privacy_p2": "We only collect information necessary to provide the service: names, emails, and apartment details. Payment data is processed securely by third parties.",
+    "legal_privacy_h2_3": "3. Information Sharing",
     "legal_privacy_p3": "We never sell your data to third parties. All data is stored encrypted on secure servers in the EU.",
+    "legal_privacy_h2_4": "4. Your Rights (GDPR)",
+    "legal_privacy_p4": "You have the right to request access to your data, its correction, or deletion at any time. Please contact us for assistance.",
+    "legal_privacy_h2_5": "5. Cookies",
+    "legal_privacy_p5": "We only use strictly necessary cookies for the platform's functionality. For more information, check your browser settings.",
     
     "legal_terms_title": "Terms of Service",
     "legal_terms_last_updated": "Last updated: May 28, 2026",
+    "legal_terms_h2_1": "1. Acceptance of Terms",
     "legal_terms_p1": "By using Bigla, you agree to these terms. The platform is intended for the management of residential buildings by authorized individuals.",
+    "legal_terms_h2_2": "2. User Responsibilities",
     "legal_terms_p2": "Users are responsible for the accuracy of the entered data. Bigla is not liable for disputes between residents and building managers.",
-    "legal_terms_p3": "We reserve the right to terminate access to users who abuse the platform or violate applicable laws."
+    "legal_terms_h2_3": "3. Termination of Access",
+    "legal_terms_p3": "We reserve the right to terminate access to users who abuse the platform or violate applicable laws.",
+    "legal_terms_h2_4": "4. Intellectual Property",
+    "legal_terms_p4": "All rights to the Bigla software, design, and brand are reserved. Copying or distributing them is strictly prohibited.",
+    "legal_terms_h2_5": "5. Limitation of Liability",
+    "legal_terms_p5": "The platform is provided \"as is\". We do not guarantee 100% service uptime and are not liable for lost profits."
   }
 };
